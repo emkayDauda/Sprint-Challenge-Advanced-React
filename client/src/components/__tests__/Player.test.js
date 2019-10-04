@@ -20,4 +20,9 @@ describe('Player component', () => {
     it('shows correct user', () => {
         expect(tools.queryByText('Adediran Ismail')).toBeInTheDocument()
     })
+
+    it('shows correct search count', () => {
+        expect(tools.queryByText(/90/)).toBeInTheDocument()
+        // tools.debug()
+    })
 })
