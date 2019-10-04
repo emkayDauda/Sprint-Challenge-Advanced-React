@@ -14,7 +14,7 @@ export default class PlayerList extends React.Component {
   }
 }
 
-function Player({ player }) {
+export function Player({ player }) {
   return (
     <div>
       <h3>{player.name}</h3>
