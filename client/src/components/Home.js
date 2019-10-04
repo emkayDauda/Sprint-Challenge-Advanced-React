@@ -10,6 +10,7 @@ import {
     YAxis,
     Tooltip
   } from "recharts";
+import Navbar from "./NavBar";
   
 export default class Home extends React.Component {
   constructor(props) {
@@ -47,6 +48,8 @@ export default class Home extends React.Component {
             // console.log(country);
             console.log(von);
             
+            console.log(this.state.countries);
+
             this.setState(previous => {
                 return {
                     countries: [...previous.countries, von]
@@ -54,7 +57,6 @@ export default class Home extends React.Component {
             })
             
         }
-        console.log(a);
         
         // console.log(counts)
 
@@ -69,6 +71,7 @@ export default class Home extends React.Component {
     const { players, countries } = this.state;
     return (
       <div>
+        <Navbar />  
         <PlayerList players={players} />
 
         <LineChart
